@@ -19,4 +19,16 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
-Route::get('/users', 'UsersController@index')->middleware('json');
+//Route::get('/users', 'UsersController@index')->middleware('json');
+
+Route::get('/users', 'UsersController@index');//->middleware('viewTojson');
+
+
+Route::get('/notify', function(){
+	$user = \App\User::find(101);
+
+	$user->notify(new \App\Notifications\NewUserRegistered($user));
+});
+
+
+
