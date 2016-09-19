@@ -68,7 +68,15 @@ class RegisterController extends Controller
             'password' => bcrypt($data['password']),
         ]);
         
+        // options to send out welcome message
+        // 1. directly from notify method
+        // $user->notify(new \App\Notification\NewUserRegistered($user));
+
+        // 2. Use an event
         event(new \App\Events\UserRegistered($user));
+
+        // 3. Use Queue
+        // dispatch((new \App\Jobs\SendWelcomeJob($user)->delay(\Carbon\Carbon::now()->addMinutes(3)));
 
         return $user;
     }

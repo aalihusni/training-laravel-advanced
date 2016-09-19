@@ -30,5 +30,15 @@ Route::get('/notify', function(){
 	$user->notify(new \App\Notifications\NewUserRegistered($user));
 });
 
+Route::get('dispatch', function(){
+	$user = \App\User::find(101);
+
+	// todo: check if user not activate yet the account, send out the dispatch job
+	$reminderJob = new \App\Jobs\SendReminderEmail($user);
+	$reminderJob->delay(\Carbon\Carbon::now()->addMinutes(1));
+
+	dispatch($reminderJob);
+});
+
 
 
