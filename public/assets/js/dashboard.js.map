@@ -1,0 +1,1 @@
+{"version":3,"sources":["dashboard.js","generic.js"],"names":[],"mappings":"AAAA;AACA;AACA;ACFA;AACA;AACA","file":"dashboard.js","sourcesContent":["jQuery(document).ready(function($) {\n\talert(1);\t\n});","jQuery(document).ready(function($) {\n\talert(2);\n});"],"sourceRoot":"/source/"}

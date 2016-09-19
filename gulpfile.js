@@ -23,17 +23,34 @@ elixir(mix => {
 	Paths passed to this method are relative to the resources/assets/css directory 
 	and the resulting CSS will be placed in public/css/all.css
 */
-// elixir(function(mix) {
-//     mix.styles([
-//         'animate.min.css'
-//     ],'public/css/animation.css','node_modules/animate.css');
-// });
 
-// elixir(function(mix) {
-//     mix.scripts([
-//         'wow.min.js'
-//     ],'public/js/animation.js','node_modules/wow.js/dist');
-// });
+// page dashboard
+elixir(function(mix){
+	mix.styles(
+		['dashboard.css','generic.css'],
+		'public/assets/css/dashboard.css');
+});
+
+// page main
+elixir(function(mix) {
+    mix.styles([
+        'generic.css',
+        'main.css'
+    ],'public/css/dashboard.css');
+});
+
+elixir(function(mix) {
+    mix.scripts([
+        'dashboard.js',
+        'generic.js'
+    ],'public/assets/js/dashboard.js');
+});
+
+elixir(function(mix) {
+    mix.scripts([
+        'canvasjs.js'
+    ],'public/assets/js/report.js','node_modules/canvasjs/dist');
+});
 
 /*
 	Paths passed to this method are relative to the resources/assets/css directory 

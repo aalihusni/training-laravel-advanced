@@ -1,0 +1,1 @@
+{"version":3,"sources":["generic.css","main.css"],"names":[],"mappings":"AAAA;AACA;AACA;ACFA;AACA;AACA","file":"dashboard.css","sourcesContent":["p {\n\tfont-size: 12px;\n}","h1 {\n\tfont-size: 24px;\n}"],"sourceRoot":"/source/"}
