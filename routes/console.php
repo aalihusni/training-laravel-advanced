@@ -46,8 +46,8 @@ Artisan::command('ask',function(){
 	$this->confirm('ask confirmation');
 });
 
-Artisan::command::('sendmail', function(){
-
+Artisan::command('sendmail', function(){
+	
 });
 
 
