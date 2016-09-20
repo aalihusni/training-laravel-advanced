@@ -21,7 +21,7 @@ Route::get('/home', 'HomeController@index');
 
 //Route::get('/users', 'UsersController@index')->middleware('json');
 
-Route::get('/users', 'UsersController@index');//->middleware('viewTojson');
+Route::get('/users', 'UsersController@index')->middleware('viewTojson');
 
 
 Route::get('/notify', function(){

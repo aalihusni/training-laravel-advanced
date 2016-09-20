@@ -7,7 +7,7 @@
 
 require('./bootstrap');
 
-require('wow.js');
+// require('wow.js');
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -16,6 +16,8 @@ require('wow.js');
  */
 
 Vue.component('example', require('./components/Example.vue'));
+Vue.component('login', require('./components/login.vue'));
+Vue.component('users-index', require('./components/users.index.vue'));
 
 const app = new Vue({
     el: 'body'
