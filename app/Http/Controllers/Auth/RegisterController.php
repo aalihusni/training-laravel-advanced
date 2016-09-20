@@ -73,10 +73,17 @@ class RegisterController extends Controller
         // $user->notify(new \App\Notification\NewUserRegistered($user));
 
         // 2. Use an event
-        event(new \App\Events\UserRegistered($user));
+        // event(new \App\Events\UserRegistered($user));
 
         // 3. Use Queue
-        // dispatch((new \App\Jobs\SendWelcomeJob($user)->delay(\Carbon\Carbon::now()->addMinutes(3)));
+        dispatch(
+            ( new \App\Jobs\SendWelcomeJob($user) )
+                ->delay(
+                    \Carbon\Carbon::now()->addMinutes(1)
+                )
+        );
+
+        // dispatch(new \App\Jobs\SendWelcomeJob($user));
 
         return $user;
     }
