@@ -86,6 +86,7 @@ Open up the application's `composer.json`, and update the `autoload` in the file
 ```
 	"autoload": {
         "psr-4": {
+        	"App\\": "app/",
             "VendorName\\PackageName\\": "packages/vendor-name/package-name/src/"
         }
     },
