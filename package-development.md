@@ -81,6 +81,16 @@ Open up the package's `composer.json`, and add in `autoload` in the file and sav
     },
 ```
 
+Open up the application's `composer.json`, and update the `autoload` in the file and save
+
+```
+	"autoload": {
+        "psr-4": {
+            "VendorName\\PackageName\\": "packages/vendor-name/package-name/src/"
+        }
+    },
+```
+
 Update the package's service provider (`src/Providers/PackageServiceProvider.php`) namespace 
 
 ```
