@@ -13,11 +13,11 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        \App\Console\Commands\Speed::class,
-        \App\Console\Commands\Serve::class,
-        \App\Console\Commands\CleanUp::class,
-        \App\Console\Commands\CleanUpServe::class,
-        \App\Console\Commands\MVCMake::class
+        // \App\Console\Commands\Speed::class,
+        // \App\Console\Commands\Serve::class,
+        // \App\Console\Commands\CleanUp::class,
+        // \App\Console\Commands\CleanUpServe::class,
+        // \App\Console\Commands\MVCMake::class
     ];
 
     /**
