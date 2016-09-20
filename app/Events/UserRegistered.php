@@ -1,5 +1,7 @@
 <?php
 
+// php artisan make:event UserRegistered
+
 namespace App\Events;
 
 use Illuminate\Broadcasting\Channel;

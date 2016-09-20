@@ -1,5 +1,7 @@
 <?php
 
+// php artisan make:listener SendWelcomeEmail --event=UserRegistered
+
 namespace App\Listeners;
 
 use App\Events\UserRegistered;
