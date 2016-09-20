@@ -25,32 +25,32 @@ elixir(mix => {
 */
 
 // page dashboard
-elixir(function(mix){
-	mix.styles(
-		['dashboard.css','generic.css'],
-		'public/assets/css/dashboard.css');
-});
+// elixir(function(mix){
+// 	mix.styles(
+// 		['dashboard.css','generic.css'],
+// 		'public/assets/css/dashboard.css');
+// });
 
 // page main
-elixir(function(mix) {
-    mix.styles([
-        'generic.css',
-        'main.css'
-    ],'public/css/dashboard.css');
-});
+// elixir(function(mix) {
+//     mix.styles([
+//         'generic.css',
+//         'main.css'
+//     ],'public/css/dashboard.css');
+// });
 
-elixir(function(mix) {
-    mix.scripts([
-        'dashboard.js',
-        'generic.js'
-    ],'public/assets/js/dashboard.js');
-});
+// elixir(function(mix) {
+//     mix.scripts([
+//         'dashboard.js',
+//         'generic.js'
+//     ],'public/assets/js/dashboard.js');
+// });
 
-elixir(function(mix) {
-    mix.scripts([
-        'canvasjs.js'
-    ],'public/assets/js/report.js','node_modules/canvasjs/dist');
-});
+// elixir(function(mix) {
+//     mix.scripts([
+//         'canvasjs.js'
+//     ],'public/assets/js/report.js','node_modules/canvasjs/dist');
+// });
 
 /*
 	Paths passed to this method are relative to the resources/assets/css directory 

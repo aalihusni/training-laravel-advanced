@@ -7,6 +7,9 @@
 
                     <div class="panel-body">
                         I'm an example component!
+                        <input type="text" name="name" v-model="name">
+                        <p>Your name is {{ name }}</p>
+                        <div class="btn btn-default" v-on:click="alert">Alert me</div>
                     </div>
                 </div>
             </div>
@@ -18,6 +21,14 @@
     export default {
         ready() {
             console.log('Component ready.')
+        },
+        data : {
+            name: ''
+        },
+        methods : {
+            alert : function() {
+                alert(1);
+            }
         }
     }
 </script>
