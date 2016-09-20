@@ -2,11 +2,12 @@
 
 namespace App\Notifications;
 
-use App\User;
 use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Notification;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
+
+use App\User;
 
 class NewUserRegistered extends Notification
 {
@@ -44,10 +45,11 @@ class NewUserRegistered extends Notification
     public function toMail($notifiable)
     {
         return (new MailMessage)
-                    ->subject('Welcome to Laravel Advanced')
-                    ->line('Welcome to our application!')
+                    ->subject('Welcome to Laravel 5.3!')
+                    ->to($this->user->email)
+                    ->line('Welcome to Laravel 5.3 ' . $this->user->name . '!')
                     ->action('Notification Action', 'https://laravel.com')
-                    ->line('Thank you for register to our application!');
+                    ->line('Thank you for using our application!');
     }
 
     /**
