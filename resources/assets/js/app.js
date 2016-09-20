@@ -16,7 +16,8 @@ require('./bootstrap');
  */
 
 Vue.component('example', require('./components/Example.vue'));
-Vue.component('hellow', require('./components/Hellow.vue'));
+Vue.component('login', require('./components/login.vue'));
+Vue.component('users-index', require('./components/users.index.vue'));
 
 const app = new Vue({
     el: 'body'
