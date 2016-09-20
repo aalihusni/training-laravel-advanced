@@ -93,6 +93,8 @@ namespace VendorName\PackageName\Providers;
 VendorName\PackageName\Providers\PackageServiceProvider::class,
 ```
 
+Starting from this point, it's depends how you develop your package. You may want to just create some custom Artisan commands, you may use `$this->commands()` to register the commands with application.
+
 
 
 
