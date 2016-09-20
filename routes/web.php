@@ -27,7 +27,7 @@ Route::get('/users', 'UsersController@index');//->middleware('viewTojson');
 Route::get('/notify', function(){
 	$user = \App\User::find(101);
 
-	$user->notify(new \App\Notifications\NewUserRegistered($user));
+	$user->notify(new \App\Notifications\NotifyNewUser($user));
 });
 
 Route::get('dispatch', function(){
@@ -39,6 +39,10 @@ Route::get('dispatch', function(){
 
 	dispatch($reminderJob);
 });
+
+Route::get('vue', function(){
+	return view('vues.sample');
+});	
 
 
 

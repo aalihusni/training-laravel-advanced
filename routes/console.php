@@ -21,6 +21,22 @@ Artisan::command('test', function(){
 	$this->info('test');
 })->describe('some test');
 
+Artisan::command('notify', function() {
+	$user = \App\User::find(101);
+
+	$user->notify(new \App\Notifications\NotifyNewUser($user));
+});
+
+Artisan::command('dispatch {--minute=1}', function(){
+	$user = \App\User::find(101);
+
+	// todo: check if user not activate yet the account, send out the dispatch job
+	$reminderJob = new \App\Jobs\SendReminderEmail($user);
+	$reminderJob->delay(\Carbon\Carbon::now()->addMinutes($this->option('minute')));
+
+	dispatch($reminderJob);
+});
+
 // Artisan::command('clean:up', function(){
 // 	$this->call('view:clear');
 
