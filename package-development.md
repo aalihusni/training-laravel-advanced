@@ -1,7 +1,6 @@
-Creating Packages
+# Step by step create Laravel Package
 
-
-1. Create the directory structure in application
+## Create the directory structure in application
 
 ```
 packages
@@ -23,32 +22,32 @@ packages
 
 **p/s: `.gitignore` is a file, not a directory**
 
-2. Update application's `.gitignore` file to exclude `packages` directory
+## Update application's `.gitignore` file to exclude `packages` directory
 
 ```
-/packages
-/node_modules
-/public/storage
-/vendor
-/.idea
-Homestead.json
-Homestead.yaml
-.env
+	/packages
+	/node_modules
+	/public/storage
+	/vendor
+	/.idea
+	Homestead.json
+	Homestead.yaml
+	.env
 ``` 
 
-3. Update package's `.gitignore` file as following
+## Update package's `.gitignore` file as following
 
 ```
-/node_modules
-/public/storage
-/vendor
-/.idea
-Homestead.json
-Homestead.yaml
-.env
+	/node_modules
+	/public/storage
+	/vendor
+	/.idea
+	Homestead.json
+	Homestead.yaml
+	.env
 ```
 
-4. In package's directory, run `composer init`. just follow the questions being ask. You should have something like following:
+## In package's directory, run `composer init`. just follow the questions being ask. You should have something like following:
 
 ```
 {
@@ -66,13 +65,13 @@ Homestead.yaml
 }
 ```
 
-5. Create a service provider and move the new provider to the package's `src` directory
+## Create a service provider and move the new provider to the package's `src` directory
 
 ```
 php artisan make:provider PackageServiceProvider
 ```
 
-6. Open up the package's `composer.json`, and add in `autoload` in the file and save
+## Open up the package's `composer.json`, and add in `autoload` in the file and save
 
 ```
 	"autoload": {
@@ -82,13 +81,13 @@ php artisan make:provider PackageServiceProvider
     },
 ```
 
-7. Update the package's service provider (`src/Providers/PackageServiceProvider.php`) namespace 
+## Update the package's service provider (`src/Providers/PackageServiceProvider.php`) namespace 
 
 ```
 namespace VendorName\PackageName\Providers;
 ```
 
-8. Register our package in `config/app.php` in `providers` 
+## Register our package in `config/app.php` in `providers` 
 
 ```
 VendorName\PackageName\Providers\PackageServiceProvider::class,
